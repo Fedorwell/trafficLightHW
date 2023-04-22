@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,13 +14,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trafficLightHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="bfI-SK-Y4u">
-                                <rect key="frame" x="146.66666666666666" y="79" width="100" height="467"/>
+                                <rect key="frame" x="157" y="68" width="100" height="467"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="x34-11-LV9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="x34-11-LV9">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="360"/>
                                         <subviews>
                                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4do-gr-kND">
@@ -50,7 +50,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GV7-0l-fVR">
-                                        <rect key="frame" x="2.3333333333333428" y="422" width="95" height="45"/>
+                                        <rect key="frame" x="2.5" y="422" width="95" height="45"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="J9A-BE-6tb"/>
@@ -61,6 +61,9 @@
                                         <state key="normal" title="START">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedButtonToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e2-Fg-0xy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -72,6 +75,12 @@
                             <constraint firstItem="bfI-SK-Y4u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iBi-pd-VQm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="84H-wt-q6g" id="OGB-uu-j42"/>
+                        <outlet property="redLightView" destination="4do-gr-kND" id="aA3-Ar-RFc"/>
+                        <outlet property="startButton" destination="GV7-0l-fVR" id="Px2-cp-Hm1"/>
+                        <outlet property="yellowLightView" destination="Bsk-G5-R62" id="jgp-hD-jVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
